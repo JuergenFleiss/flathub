@@ -1,7 +1,7 @@
 name: "Close stale blocked PRs"
 on:
   schedule:
-  - cron: "0 0 * * 6"
+  - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
@@ -15,16 +15,20 @@ jobs:
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-pr-message: |-
-          This pull request has not received any updates and it will be
-          automatically closed in 7 days. Please comment or reopen if
-          necessary.
+          This pull request has been marked as blocked and is not ready
+          for inclusion in its current state. It will be automatically
+          closed unless the issues are resolved.
         days-before-stale: -1
         days-before-close: -1
-        days-before-pr-stale: 23
+        days-before-pr-stale: 7
         days-before-pr-close: 7
         any-of-pr-labels: blocked,pr-check-blocked
         remove-stale-when-updated: false
         exempt-pr-labels: leave-open
-        operations-per-run: 200
+        exempt-draft-pr: true
+        operations-per-run: 500
         ascending: true
         ignore-updates: true
+        stale-issue-label: "blocked"
+        stale-pr-label: "blocked"
+        sort-by: updated
