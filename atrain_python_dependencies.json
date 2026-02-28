@@ -3,7 +3,9 @@
   "buildsystem": "simple",
   "build-commands": [
     "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps --ignore-installed pygments*.whl",
-    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation aiofiles aiohappyeyeballs aiohttp aiosignal alembic annotated-doc annotated-types anyio asteroid-filterbanks attrs av bidict bottle certifi charset-normalizer click cloudpickle colorlog contourpy ctranslate2 cycler dask docutils einops fastapi faster-whisper filelock flatbuffers fonttools frozenlist fsspec googleapis-common-protos greenlet grpcio h11 httpcore httptools httpx huggingface-hub idna ifaddr importlib-metadata itsdangerous jeepney jinja2 joblib julius kiwisolver lightning lightning-utilities locket mako markdown-it-py markdown2 markupsafe matplotlib mdurl mpmath multidict networkx nicegui numpy nvidia-cublas-cu12 nvidia-cuda-cupti-cu12 nvidia-cuda-nvrtc-cu12 nvidia-cuda-runtime-cu12 nvidia-cudnn-cu12 nvidia-cufft-cu12 nvidia-cufile-cu12 nvidia-curand-cu12 nvidia-cusolver-cu12 nvidia-cusparse-cu12 nvidia-cusparselt-cu12 nvidia-nccl-cu12 nvidia-nvjitlink-cu12 nvidia-nvshmem-cu12 nvidia-nvtx-cu12 onnxruntime opentelemetry-api opentelemetry-exporter-otlp opentelemetry-exporter-otlp-proto-common opentelemetry-exporter-otlp-proto-grpc opentelemetry-exporter-otlp-proto-http opentelemetry-proto opentelemetry-sdk opentelemetry-semantic-conventions optuna orjson packaging pandas partd pillow platformdirs primepy propcache protobuf proxy-tools pscript pyannote-audio pyannote-core pyannote-database pyannote-metrics pyannote-pipeline pyannoteai-sdk pycairo pydantic pydantic-core pygments pygobject pygobject-stubs pyparsing python-dateutil python-dotenv python-engineio python-multipart python-socketio pytorch-lightning pytorch-metric-learning pytz pywebview pyxdg pyyaml requests rich safetensors scikit-learn scipy setuptools shellingham show-in-file-manager simple-websocket six sortedcontainers sqlalchemy starlette sympy threadpoolctl tokenizers toolz torch torch-audiomentations torch-pitch-shift torchaudio torchcodec torchmetrics tqdm triton typer typing-extensions typing-inspection tzdata urllib3 uvicorn uvloop vbuild wakepy watchfiles websockets werkzeug wsproto yarl zipp"
+    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps torch-*.whl",
+    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation --no-deps torchcodec-*.whl",
+    "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} --no-build-isolation aiofiles aiohappyeyeballs aiohttp aiosignal alembic annotated-doc annotated-types anyio asteroid-filterbanks attrs av bidict bottle certifi charset-normalizer click cloudpickle colorlog contourpy ctranslate2 cycler dask docutils einops fastapi faster-whisper filelock flatbuffers fonttools frozenlist fsspec googleapis-common-protos greenlet grpcio h11 httpcore httptools httpx huggingface-hub idna ifaddr importlib-metadata itsdangerous jeepney jinja2 joblib julius kiwisolver lightning lightning-utilities locket mako markdown-it-py markdown2 markupsafe matplotlib mdurl mpmath multidict networkx nicegui numpy nvidia-cublas-cu12 nvidia-cuda-cupti-cu12 nvidia-cuda-nvrtc-cu12 nvidia-cuda-runtime-cu12 nvidia-cudnn-cu12 nvidia-cufft-cu12 nvidia-cufile-cu12 nvidia-curand-cu12 nvidia-cusolver-cu12 nvidia-cusparse-cu12 nvidia-cusparselt-cu12 nvidia-nccl-cu12 nvidia-nvjitlink-cu12 nvidia-nvshmem-cu12 nvidia-nvtx-cu12 onnxruntime opentelemetry-api opentelemetry-exporter-otlp opentelemetry-exporter-otlp-proto-common opentelemetry-exporter-otlp-proto-grpc opentelemetry-exporter-otlp-proto-http opentelemetry-proto opentelemetry-sdk opentelemetry-semantic-conventions optuna orjson packaging pandas partd pillow platformdirs primepy propcache protobuf proxy-tools pscript pyannote-audio pyannote-core pyannote-database pyannote-metrics pyannote-pipeline pyannoteai-sdk pycairo pydantic pydantic-core pygments pygobject pygobject-stubs pyparsing python-dateutil python-dotenv python-engineio python-multipart python-socketio pytorch-lightning pytorch-metric-learning pytz pywebview pyxdg pyyaml requests rich safetensors scikit-learn scipy setuptools shellingham show-in-file-manager simple-websocket six sortedcontainers sqlalchemy starlette sympy threadpoolctl tokenizers toolz torch-audiomentations torch-pitch-shift torchaudio torchmetrics tqdm triton typer typing-extensions typing-inspection tzdata urllib3 uvicorn uvloop vbuild wakepy watchfiles websockets werkzeug wsproto yarl zipp"
   ],
   "sources": [
     {
@@ -15,6 +17,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/0f/15/5bf3b99495fb160b63f95972b81750f18f7f4e02ad051373b669d17d44f2/aiohappyeyeballs-2.6.1-py3-none-any.whl",
       "sha256": "f349ba8f4b75cb25c99c5c2d84e997e485204d2902a9597802b0371f09331fb8"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/6d/40/a46b03ca03936f832bc7eaa47cfbb1ad012ba1be4790122ee4f4f8cba074/aiohttp-3.13.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "7f9120f7093c2a32d9647abcaf21e6ad275b4fbec5b55969f978b1a97c7c86bf",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -59,6 +67,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/51/23/408806503e8d5d840975aad5699b153aaa21eb6de41ade75248a79b7a37f/av-16.1.0-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "sha256": "57f657f86652a160a8a01887aaab82282f9e629abf94c780bbdbb01595d6f0f7",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/c4/19/a8528d5bba592b3903f44c28dab9cc653c95fcf7393f382d2751a1d1523e/av-16.1.0-cp313-cp313-manylinux_2_28_x86_64.whl",
       "sha256": "adbad2b355c2ee4552cac59762809d791bda90586d134a33c6f13727fb86cb3a",
       "only-arches": ["x86_64"]
@@ -77,6 +91,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/e6/ad/3cc14f097111b4de0040c83a525973216457bbeeb63739ef1ed275c1c021/certifi-2026.1.4-py3-none-any.whl",
       "sha256": "9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/7d/62/73a6d7450829655a35bb88a88fca7d736f9882a27eacdca2c6d505b57e2e/charset_normalizer-3.4.4-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "6b39f987ae8ccdf0d2642338faf2abb1862340facc796048b604ef14919e55ed",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -101,9 +121,21 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/73/23/90e31ceeed1de63058a02cb04b12f2de4b40e3bef5e082a7c18d9c8ae281/contourpy-1.3.3-cp313-cp313-manylinux_2_26_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "348ac1f5d4f1d66d3322420f01d42e43122f43616e0f194fc1c9f5d830c5b286",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/4b/32/e0f13a1c5b0f8572d0ec6ae2f6c677b7991fafd95da523159c19eff0696a/contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "4debd64f124ca62069f313a9cb86656ff087786016d76927ae2cf37846b006c9",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/ea/03/c0db0a5276599fb44ceafa2f2cb1afd5628808ec406fe036060a39693680/ctranslate2-4.7.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "393a9e7e989034660526a2c0e8bb65d1924f43d9a5c77d336494a353d16ba2a4",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -143,8 +175,8 @@
     },
     {
       "type": "file",
-      "url": "https://files.pythonhosted.org/packages/e7/04/a94ebfb4eaaa08db56725a40de2887e95de4e8641b9e902c311bfa00aa39/filelock-3.24.2-py3-none-any.whl",
-      "sha256": "667d7dc0b7d1e1064dd5f8f8e80bdac157a6482e8d2e02cd16fd3b6b33bd6556"
+      "url": "https://files.pythonhosted.org/packages/9c/0f/5d0c71a1aefeb08efff26272149e07ab922b64f46c63363756224bd6872e/filelock-3.24.3-py3-none-any.whl",
+      "sha256": "426e9a4660391f7f8a810d71b0555bce9008b0a1cc342ab1f6947d37639e002d"
     },
     {
       "type": "file",
@@ -159,9 +191,21 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/b0/8d/6fb3494dfe61a46258cd93d979cf4725ded4eb46c2a4ca35e4490d84daea/fonttools-4.61.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "4c1b526c8d3f615a7b1867f38a9410849c8f4aef078535742198e942fba0e9bd",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/d5/4e/e4691508f9477ce67da2015d8c00acd751e6287739123113a9fca6f1604e/frozenlist-1.8.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
       "sha256": "fb30f9626572a76dfe4293c7194a09fb1fe93ba94c7d4f720dfae3b646b45027",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/40/76/c202df58e3acdf12969a7895fd6f3bc016c642e6726aa63bd3025e0fc71c/frozenlist-1.8.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "eaa352d7047a31d87dafcacbabe89df0aa506abb5b1b85a2fb91bc3faa02d822",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -175,9 +219,21 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/10/d3/be7d19e8fad7c5a78eeefb2d896a08cd4643e1e90c605c4be3b46264998f/greenlet-3.3.1-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "65be2f026ca6a176f88fb935ee23c18333ccea97048076aef4db1ef5bc0713ac",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/cb/86/5c6ab23bb3c28c21ed6bebad006515cfe08b04613eb105ca0041fecca852/greenlet-3.3.1-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "6423481193bbbe871313de5fd06a082f2649e7ce6e08015d2a76c1e9186ca5b3",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/88/93/b59fe7832ff6ae3c78b813ea43dac60e295fa03606d14d89d2e0ec29f4f3/grpcio-1.78.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "8f2ac84905d12918e4e55a16da17939eb63e433dc11b677267c35568aa63fc84",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -200,6 +256,12 @@
       "url": "https://files.pythonhosted.org/packages/32/6a/6aaa91937f0010d288d3d124ca2946d48d60c3a5ee7ca62afe870e3ea011/httptools-0.7.1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl",
       "sha256": "04c6c0e6c5fb0739c5b8a9eb046d298650a0ff38cf42537fc372b28dc7e4472c",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/6d/70/023d7ce117993107be88d2cbca566a7c1323ccbaf0af7eabf2064fe356f6/httptools-0.7.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "69d4f9705c405ae3ee83d6a12283dc9feba8cc6aaec671b412917e644ab4fa66",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -259,6 +321,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/d9/28/aac26d4c882f14de59041636292bc838db8961373825df23b8eeb807e198/kiwisolver-1.4.9-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "5656aa670507437af0207645273ccdfee4f14bacd7f7c67a4306d0dcaeaf6eed",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/4a/6d/42640e15a8c34b57dc7ea922152440c0c6692214a08d5282b6e3eb46ddf4/lightning-2.6.1-py3-none-any.whl",
       "sha256": "30e1adac23004c713663928541bd72ecb1371b7abc9aff9f46b7fd2644988d30"
     },
@@ -279,13 +347,19 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/b8/06/2697b5043c3ecb720ce0d243fc7cf5024c0b5b1e450506e9b21939019963/markdown2-2.5.4-py3-none-any.whl",
+      "sha256": "3c4b2934e677be7fec0e6f2de4410e116681f4ad50ec8e5ba7557be506d3f439"
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/94/54/e7d793b573f298e1c9013b8c4dade17d481164aa517d1d7148619c2cedbf/markdown_it_py-4.0.0-py3-none-any.whl",
       "sha256": "87327c59b172c5011896038353a81343b6754500a08cd7a4973bb48c6d578147"
     },
     {
       "type": "file",
-      "url": "https://files.pythonhosted.org/packages/b8/06/2697b5043c3ecb720ce0d243fc7cf5024c0b5b1e450506e9b21939019963/markdown2-2.5.4-py3-none-any.whl",
-      "sha256": "3c4b2934e677be7fec0e6f2de4410e116681f4ad50ec8e5ba7557be506d3f439"
+      "url": "https://files.pythonhosted.org/packages/00/07/575a68c754943058c78f30db02ee03a64b3c638586fba6a6dd56830b30a3/markupsafe-3.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "133a43e73a802c5562be9bbcd03d090aa5a1fe899db609c29e8c8d815c5f6de6",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -301,6 +375,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/01/be/cd478f4b66f48256f42927d0acbcd63a26a893136456cd079c0cc24fbabf/matplotlib-3.10.8-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "646d95230efb9ca614a7a594d4fcacde0ac61d25e37dd51710b36477594963ce",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl",
       "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"
     },
@@ -308,6 +388,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/43/e3/7d92a15f894aa0c9c4b49b8ee9ac9850d6e63b03c9c32c0367a13ae62209/mpmath-1.3.0-py3-none-any.whl",
       "sha256": "a0b2b9fe80bbcd81a6647ff13108738cfb482d481d826cc0e02f5b35e5c88d2c"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/f6/32/befed7f74c458b4a525e60519fe8d87eef72bb1e99924fa2b0f9d97a221e/multidict-6.7.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "e82d14e3c948952a1a85503817e038cba5905a3352de76b9a465075d072fba23",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -327,15 +413,33 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2c/03/c72474c13772e30e1bc2e558cdffd9123c7872b731263d5648b5c49dd459/numpy-2.2.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "250c16b277e3b809ac20d1f590716597481061b514223c7badb7a0f9993c7f84",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/83/9c/96a9ab62274ffafb023f8ee08c88d3d31ee74ca58869f859db6845494fa6/numpy-2.2.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
       "sha256": "e0c8854b09bc4de7b041148d8550d3bd712b5c21ff6a8ed308085f190235d7ff",
       "only-arches": ["x86_64"]
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/29/99/db44d685f0e257ff0e213ade1964fc459b4a690a73293220e98feb3307cf/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_aarch64.whl",
+      "sha256": "b86f6dd8935884615a0683b663891d43781b819ac4f2ba2b0c9604676af346d0",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/dc/61/e24b560ab2e2eaeb3c839129175fb330dfcfc29e5203196e5541a4c44682/nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl",
       "sha256": "8ac4e771d5a348c551b2a426eda6193c19aa630236b418086020df5ba9667142",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/d5/1f/b3bd73445e5cb342727fd24fe1f7b748f690b460acadc27ea22f904502c8/nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "4412396548808ddfed3f17a467b104ba7751e6b58678a4b840675c56d21cf7ed",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -351,15 +455,39 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/eb/d1/e50d0acaab360482034b84b6e27ee83c6738f7d32182b987f9c7a4e32962/nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "fc1fec1e1637854b4c0a65fb9a8346b51dd9ee69e61ebaccc82058441f15bce8",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/7c/75/f865a3b236e4647605ea34cc450900854ba123834a5f1598e160b9530c3a/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "52bf7bbee900262ffefe5e9d5a2a69a30d97e2bc5bb6cc866688caa976966e3d",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/0d/9b/a997b638fcd068ad6e4d53b8551a7d30fe8b404d6f1804abf1df69838932/nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
       "sha256": "adade8dcbd0edf427b7204d480d6066d33902cab2a4707dcfc48a2d0fd44ab90",
       "only-arches": ["x86_64"]
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/fa/41/e79269ce215c857c935fd86bcfe91a451a584dfc27f1e068f568b9ad1ab7/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_aarch64.whl",
+      "sha256": "c9132cc3f8958447b4910a1720036d9eff5928cc3179b0a51fb6d167c6cc87d8",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/ba/51/e123d997aa098c61d029f76663dedbfb9bc8dcf8c60cbd6adbe42f76d049/nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl",
       "sha256": "949452be657fa16687d0930933f032835951ef0892b37d2d53824d1a84dc97a8",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/60/bc/7771846d3a0272026c416fbb7e5f4c1f146d6d80704534d0b187dd6f4800/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "848ef7224d6305cdb2a4df928759dca7b1201874787083b6e7550dd6765ce69a",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -375,9 +503,27 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/1e/f5/5607710447a6fe9fd9b3283956fceeee8a06cda1d2f56ce31371f595db2a/nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux_2_27_aarch64.whl",
+      "sha256": "4beb6d4cce47c1a0f1013d72e02b0994730359e17801d395bdcbf20cfb3bb00a",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/45/5e/92aa15eca622a388b80fbf8375d4760738df6285b1e92c43d37390a33a9a/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_aarch64.whl",
+      "sha256": "dfab99248034673b779bc6decafdc3404a8a6f502462201f2f31f11354204acd",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/fb/aa/6584b56dc84ebe9cf93226a5cde4d99080c8e90ab40f0c27bda7a0f29aa1/nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl",
       "sha256": "b32331d4f4df5d6eefa0554c565b626c7216f87a06a4f56fab27c3b68a830ec9",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/c8/32/f7cd6ce8a7690544d084ea21c26e910a97e077c9b7f07bf5de623ee19981/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_aarch64.whl",
+      "sha256": "db9ed69dbef9715071232caa9b69c52ac7de3a95773c2db65bdba85916e4e5c0",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -387,15 +533,33 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/bc/f7/cd777c4109681367721b00a106f491e0d0d15cfa1fd59672ce580ce42a97/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "9b6c161cb130be1a07a27ea6923df8141f3c295852f4b260c65f18f3e0a091dc",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/c2/f5/e1854cb2f2bcd4280c44736c93550cc300ff4b8c95ebe370d0aa7d2b473d/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
       "sha256": "1ec05d76bbbd8b61b06a80e1eaf8cf4959c3d4ce8e711b65ebd0443bb0ebb13b",
       "only-arches": ["x86_64"]
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/73/b9/598f6ff36faaece4b3c50d26f50e38661499ff34346f00e057760b35cc9d/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_aarch64.whl",
+      "sha256": "8878dce784d0fac90131b6817b607e803c36e629ba34dc5b433471382196b6a5",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/56/79/12978b96bd44274fe38b5dde5cfb660b1d114f70a65ef962bcbbed99b549/nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl",
       "sha256": "f1bb701d6b930d5a7cea44c19ceb973311500847f81b634d802b7b539dc55623",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/bb/1c/857979db0ef194ca5e21478a0612bcdbbe59458d7694361882279947b349/nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "31432ad4d1fb1004eb0c56203dc9bc2178a1ba69d1d9e02d64a6938ab5e40e7a",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -411,15 +575,39 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2a/a2/8cee5da30d13430e87bf99bb33455d2724d0a4a9cb5d7926d80ccb96d008/nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "adccd7161ace7261e01bb91e44e88da350895c270d23f744f0820c818b7229e7",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/92/9d/3dd98852568fb845ec1f7902c90a22b240fe1cbabda411ccedf2fd737b7b/nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "0b0b960da3842212758e4fa4696b94f129090b30e5122fea3c5345916545cff0",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/3b/6c/99acb2f9eb85c29fc6f3a7ac4dccfd992e22666dd08a642b303311326a97/nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
       "sha256": "d00f26d3f9b2e3c3065be895e3059d6479ea5c638a3f38c9fec49b1b9dd7c1e5",
       "only-arches": ["x86_64"]
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/10/c0/1b303feea90d296f6176f32a2a70b5ef230f9bdeb3a72bddb0dc922dc137/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "sha256": "d7ad891da111ebafbf7e015d34879f7112832fc239ff0d7d776b6cb685274615",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/a2/eb/86626c1bbc2edb86323022371c39aa48df6fd8b0a1647bc274577f72e90b/nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
       "sha256": "5b17e2001cc0d751a5bc2c6ec6d26ad95913324a4adb86788c944f8ce9ba441f",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/79/5b/532a0d75b93bbd0da0e108b986097ebe164b84fbecfdf2ddbf7c8a3a2e83/onnxruntime-1.24.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "1099f3629832580fedf415cfce2462a56cc9ca2b560d6300c24558e2ac049134",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -474,6 +662,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/89/25/0a16e0729a0e6a1504f9d1a13cdd365f030068aab64cec6958396b9969d7/orjson-3.11.7-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "814be4b49b228cfc0b3c565acf642dd7d13538f966e3ccde61f4f55be3e20785",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/c9/ec/c68e3b9021a31d9ec15a94931db1410136af862955854ed5dd7e7e4f5bff/orjson-3.11.7-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
       "sha256": "a12b80df61aab7b98b490fe9e4879925ba666fccdfcd175252ce4d9035865ace",
       "only-arches": ["x86_64"]
@@ -485,6 +679,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/16/87/9472cf4a487d848476865321de18cc8c920b8cab98453ab79dbbc98db63a/pandas-2.3.3-cp313-cp313-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "e32e7cc9af0f1cc15548288a51a3b681cc2a219faa838e995f7dc53dbab1062d",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/15/07/284f757f63f8a8d69ed4472bfd85122bd086e637bf4ed09de572d575a693/pandas-2.3.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "318d77e0e42a628c04dc56bcef4b40de67918f7041c2b061af1da41dcff670ac",
       "only-arches": ["x86_64"]
@@ -493,6 +693,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/71/e7/40fb618334dcdf7c5a316c0e7343c5cd82d3d866edc100d98e29bc945ecd/partd-1.4.2-py3-none-any.whl",
       "sha256": "978e4ac767ec4ba5b86c6eaa52e5a2a3bc748a2ca839e8cc798f1cc6ce6efb0f"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/29/9b/d6ecd956bb1266dd1045e995cce9b8d77759e740953a1c9aad9502a0461e/pillow-12.1.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "5a8eb7ed8d4198bccbd07058416eeec51686b498e784eda166395a23eb99138e",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -512,9 +718,21 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2d/48/c5ac64dee5262044348d1d78a5f85dd1a57464a60d30daee946699963eb3/propcache-0.4.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "333ddb9031d2704a301ee3e506dc46b1fe5f294ec198ed6435ad5b6a085facfe",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/f1/8b/544bc867e24e1bd48f3118cecd3b05c694e160a168478fa28770f22fd094/propcache-0.4.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "d472aeb4fbf9865e0c6d622d7f4d54a4e101a89715d8904282bb5f9a2f476c3f",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/4e/b1/c79468184310de09d75095ed1314b839eb2f72df71097db9d1404a1b2717/protobuf-6.33.5-cp39-abi3-manylinux2014_aarch64.whl",
+      "sha256": "9b71e0281f36f179d00cbcb119cb19dec4d14a81393e5ea220f64b286173e190",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -571,6 +789,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/5a/87/b70ad306ebb6f9b585f114d0ac2137d792b48be34d732d60e597c2f8465a/pydantic-2.12.5-py3-none-any.whl",
       "sha256": "e561593fccf61e8a20fc46dfc2dfe075b8be7d0188df33f221ad1f0139180f9d"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/15/df/a4c740c0943e93e6500f9eb23f4ca7ec9bf71b19e608ae5b579678c8d02f/pydantic_core-2.41.5-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "0cbaad15cb0c90aa221d43c00e77bb33c93e8d36e0bf74760cd00e732d10a6a0",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -650,6 +874,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/50/31/b20f376d3f810b9b2371e72ef5adb33879b25edb7a6d072cb7ca0c486398/pyyaml-6.0.3-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "ee2922902c45ae8ccada2c5b501ab86c36525b883eff4255313a253a3160861c",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/74/27/e5b8f34d02d9995b80abcef563ea1f8b56d20134d8f4e5e81733b1feceb2/pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "0f29edc409a6392443abf94b9cf89ce99889a1dd5376d94316ae5145dfedd5d6",
       "only-arches": ["x86_64"]
@@ -666,15 +896,33 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/f1/06/578ffed52c2296f93d7fd2d844cabfa92be51a587c38c8afbb8ae449ca89/safetensors-0.7.0-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "e07d91d0c92a31200f25351f4acb2bc6aff7f48094e13ebb1d0fb995b54b6542",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/a0/60/429e9b1cb3fc651937727befe258ea24122d9663e4d5709a48c9cbfceecb/safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
       "sha256": "dac7252938f0696ddea46f5e855dd3138444e82236e3be475f54929f0c510d48",
       "only-arches": ["x86_64"]
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/2d/5a/3f1caed8765f33eabb723596666da4ebbf43d11e96550fb18bdec42b467b/scikit_learn-1.8.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "74b66d8689d52ed04c271e1329f0c61635bcaf5b926db9b12d58914cdc01fe57",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/38/cf/06896db3f71c75902a8e9943b444a56e727418f6b4b4a90c98c934f51ed4/scikit_learn-1.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "8fdf95767f989b0cfedb85f7ed8ca215d4be728031f56ff5a519ee1e3276dc2e",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/c9/10/be13397a0e434f98e0c79552b2b584ae5bb1c8b2be95db421533bbca5369/scipy-1.17.0-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "fe508b5690e9eaaa9467fc047f833af58f1152ae51a0d0aed67aa5801f4dd7d6",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -714,6 +962,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/46/c1/b34dccd712e8ea846edf396e00973dda82d598cb93762e55e43e6835eba9/sqlalchemy-2.0.46-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "af865c18752d416798dae13f83f38927c52f085c52e2f32b8ab0fef46fdd02c2",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/96/48/a04d9c94753e5d5d096c628c82a98c4793b9c08ca0e7155c3eb7d7db9f24/sqlalchemy-2.0.46-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "8d679b5f318423eacb61f933a9a0f75535bfca7056daeadbf6bd5bcee6183aee",
       "only-arches": ["x86_64"]
@@ -735,6 +989,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/d6/84/7990e799f1309a8b87af6b948f31edaa12a3ed22d11b352eaf4f4b2e5753/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "2249487018adec45d6e3554c71d46eb39fa8ea67156c640f7513eb26f318cec7",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/2e/76/932be4b50ef6ccedf9d3c6639b056a967a86258c6d9200643f01269211ca/tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
       "sha256": "369cc9fc8cc10cb24143873a0d95438bb8ee257bb80c71989e3ee290e8d72c67",
       "only-arches": ["x86_64"]
@@ -743,6 +1003,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/fb/12/5911ae3eeec47800503a238d971e51722ccea5feb8569b735184d5fcdbc0/toolz-1.1.0-py3-none-any.whl",
       "sha256": "15ccc861ac51c53696de0a5d6d4607f99c210739caf987b5d2054f3efed429d8"
+    },
+    {
+      "type": "file",
+      "url": "https://download.pytorch.org/whl/cu128/torch-2.9.1%2Bcu128-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "sha256": "0b80b7555dcd0a75b7b06016991f01281a0bb078cf28fa2d1dfb949fad2fbd07",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -762,9 +1028,21 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/76/e2/fe55b3882157fd57aa131f5bcad90f0329be90827e1c0e0c482662ddef38/torchaudio-2.9.1-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "sha256": "ba2799ceec5e4373a0aa26df30d608f1eaaefd8ac4a7ae0c3446f63106f5b5a5",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/74/d3/0b090c03cac5a20691507e0945589a696fb10402ccd2457eea47dbf8a71b/torchaudio-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl",
       "sha256": "bc3c8e9a240bfad8bc61f769324a4f3ce5d60eec161369d457c595c35dbb10c7",
       "only-arches": ["x86_64"]
+    },
+    {
+      "type": "file",
+      "url": "https://download.pytorch.org/whl/cu128/torchcodec-0.10.0%2Bcu128-cp313-cp313-manylinux_2_28_aarch64.whl",
+      "sha256": "ec23567f5466cd8e69c1994380f697097ad430199063df7a6d6ecd8302b4faa9",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -781,6 +1059,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/16/e1/3079a9ff9b8e11b846c6ac5c8b5bfb7ff225eee721825310c91b3b50304f/tqdm-4.67.3-py3-none-any.whl",
       "sha256": "ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/f1/ba/805684a992ee32d486b7948d36aed2f5e3c643fc63883bf8bdca1c3f3980/triton-3.5.1-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "56765ffe12c554cd560698398b8a268db1f616c120007bfd8829d27139abd24a",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
@@ -820,6 +1104,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/b7/02/654426ce265ac19e2980bfd9ea6590ca96a56f10c76e63801a2df01c0486/uvloop-0.22.1-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "6e2ea3d6190a2968f4a14a23019d3b16870dd2190cd69c8180f7c632d21de68d",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/15/c0/0be24758891ef825f2065cd5db8741aaddabe3e248ee6acc5e8a80f04005/uvloop-0.22.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
       "sha256": "0530a5fbad9c9e4ee3f2b33b148c6a64d47bbad8000ea63704fa8260f4cf728e",
       "only-arches": ["x86_64"]
@@ -836,6 +1126,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/bc/11/fc2502457e0bea39a5c958d86d2cb69e407a4d00b85735ca724bfa6e0d1a/watchfiles-1.1.1-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "14e0b1fe858430fc0251737ef3824c54027bedb8c37c38114488b8e131cf8219",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/62/da/def65b170a3815af7bd40a3e7010bf6ab53089ef1b75d05dd5385b87cf08/watchfiles-1.1.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
       "sha256": "c755367e51db90e75b19454b680903631d41f9e3607fbd941d296a020c2d752d",
       "only-arches": ["x86_64"]
@@ -848,6 +1144,12 @@
     },
     {
       "type": "file",
+      "url": "https://files.pythonhosted.org/packages/f9/66/27ea52741752f5107c2e41fda05e8395a682a1e11c4e592a809a90c6a506/websockets-16.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "c0204dc62a89dc9d50d682412c10b3542d748260d743500a85c13cd1ee4bde82",
+      "only-arches": ["aarch64"]
+    },
+    {
+      "type": "file",
       "url": "https://files.pythonhosted.org/packages/9d/6e/e792999e816d19d7fcbfa94c730936750036d65656a76a5a688b57a656c4/werkzeug-3.0.3-py3-none-any.whl",
       "sha256": "fc9645dc43e03e4d630d23143a04a7f947a9a3b5727cd535fdfe155a17cc48c8"
     },
@@ -855,6 +1157,12 @@
       "type": "file",
       "url": "https://files.pythonhosted.org/packages/a4/f5/10b68b7b1544245097b2a1b8238f66f2fc6dcaeb24ba5d917f52bd2eed4f/wsproto-1.3.2-py3-none-any.whl",
       "sha256": "61eea322cdf56e8cc904bd3ad7573359a242ba65688716b0710a5eb12beab584"
+    },
+    {
+      "type": "file",
+      "url": "https://files.pythonhosted.org/packages/61/3a/caf4e25036db0f2da4ca22a353dfeb3c9d3c95d2761ebe9b14df8fc16eb0/yarl-1.22.0-cp313-cp313-manylinux2014_aarch64.manylinux_2_17_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "b4f15793aa49793ec8d1c708ab7f9eded1aa72edc5174cae703651555ed1b601",
+      "only-arches": ["aarch64"]
     },
     {
       "type": "file",
