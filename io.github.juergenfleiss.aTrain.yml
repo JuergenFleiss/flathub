@@ -22,7 +22,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuergenFleiss/atrain_core.git
-        branch: feature_flatpak
         commit: 7b084daa1a11eaa289d18cc11699a0fc3f0d114d
 
   - name: atrain
@@ -37,5 +36,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/JuergenFleiss/aTrain.git
-        branch: feature_flatpak
         commit: cc3a7dece6b26dff03de1af8d0fdc23a6f66b204
